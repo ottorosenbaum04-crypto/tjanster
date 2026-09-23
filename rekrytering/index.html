@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rekryteringsradarn – veckovisa leads för bemanning och rekrytering</title>
+<meta name="description" content="Varje måndag: företagen i din region som just nu rekryterar de roller du tillsätter, sorterade efter hur hett behovet är. 690 kr/mån.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <div class="eyebrow">Rekryteringsradarn · för bemannings- och rekryteringsföretag</div>
+  <h1>Varje måndag: företagen som behöver folk just nu.</h1>
+  <p class="lead">Vi läser alla nya platsannonser i Sverige och skickar en lista över de arbetsgivare i din
+    region som rekryterar de roller du tillsätter. Signaler som återpublicerade annonser, många tjänster samtidigt
+    och brådskande startdatum visar var behovet är störst.</p>
+  <div class="cta">
+    <a class="btn primary" data-stripe="rekrytering" href="#">Förhandsboka: första månaden 490 kr</a>
+    <a class="btn ghost" href="#vantelista">Ställ dig på väntelistan</a>
+  </div>
+  <p class="note">Endast för företag. Priser exkl. eventuell moms. Därefter 690 kr/mån, ingen bindningstid. Ingen betalning nu.</p>
+</header>
+
+<main>
+  <h2>Det här får du</h2>
+  <ul class="check">
+    <li><strong>Veckolista</strong> över arbetsgivare med aktiva annonser inom dina roller och regioner.</li>
+    <li><strong>Behovssignaler:</strong> annonser som publicerats om, flera tjänster samtidigt, "snarast"-tillträde, långa ansökningstider.</li>
+    <li><strong>Kort sammanfattning per företag:</strong> vilka roller, hur många, sedan när.</li>
+    <li><strong>Trender:</strong> vilka roller som ökar och minskar i din region jämfört med förra månaden.</li>
+    <li>Levereras som e-post och CSV-fil som du kan importera i ditt CRM.</li>
+  </ul>
+
+  <h2>Exempel på leverans</h2>
+  <div class="sample">
+    <span class="tag">Exempel · fiktiva företag</span>
+    <strong>Vecka 41 · Lager och logistik · Västra Götaland</strong>
+    <table>
+      <tr><th>Arbetsgivare</th><th>Roller</th><th>Signal</th></tr>
+      <tr><td>Exempel Logistik AB</td><td>6 × truckförare, 2 × teamledare</td><td>Annonsen publicerad för tredje gången på 5 veckor</td></tr>
+      <tr><td>Fiktiva Frakt i Borås AB</td><td>4 × lagermedarbetare</td><td>Tillträde "snarast", kvällsskift</td></tr>
+      <tr><td>Demo Distribution AB</td><td>1 × lagerchef</td><td>Ny etablering enligt annonsen</td></tr>
+    </table>
+  </div>
+
+  <h2>Pris</h2>
+  <div class="prices">
+    <div class="price">
+      <div>Rekryteringsradarn</div>
+      <div class="amount">690 kr</div>
+      <div class="per">per månad · valfria roller och regioner · första månaden 490 kr</div>
+    </div>
+  </div>
+
+  <h2 id="vantelista">Väntelista</h2>
+  <form data-waitlist>
+    <input type="hidden" name="nisch" value="rekrytering">
+    <input type="hidden" name="kalla" value="">
+    <label>E-post (jobb)<input type="email" name="email" required autocomplete="email"></label>
+    <label>Företag<input type="text" name="foretag" required></label>
+    <label>Vilka roller tillsätter ni främst?<input type="text" name="roller" required placeholder="t.ex. lager, bygg, vård, IT"></label>
+    <label>Regioner<input type="text" name="regioner" required placeholder="t.ex. Stockholm, Uppsala"></label>
+    <label>Hur hittar ni nya kunder idag? (valfritt)<textarea name="idag" rows="2"></textarea></label>
+    <label class="inline"><input type="checkbox" name="samtycke" required>
+      <span>Jag vill få information om lansering och godkänner att uppgifterna behandlas enligt <a href="../integritet.html">integritetspolicyn</a>.</span></label>
+    <button type="submit">Ställ mig på väntelistan</button>
+    <div class="form-msg" role="status"></div>
+  </form>
+
+  <h2>Vanliga frågor</h2>
+  <details><summary>Varifrån kommer datan?</summary>
+    <p>Från Arbetsförmedlingens öppna data om platsannonser (JobTech). Vi redovisar arbetsgivare och roller.
+    Kontaktpersoner och andra personuppgifter i annonserna tas inte med.</p></details>
+  <details><summary>Vem sammanställer listan?</summary>
+    <p>Listan sorteras och sammanfattas av AI (Claude från Anthropic) enligt fasta regler. Signalerna är ett
+    beslutsstöd och ingen garanti för att ett företag vill anlita er.</p></details>
+  <details><summary>Får jag kontakta företagen på listan?</summary>
+    <p>Du ansvarar själv för att din kontakt följer marknadsföringslagen och GDPR. Kontakta till exempel
+    företagets allmänna kanaler och erbjud alltid möjlighet att tacka nej.</p></details>
+  <details><summary>Kan jag säga upp?</summary><p>Ja, när som helst. Tjänsten löper ut vid slutet av den betalda månaden.</p></details>
+
+  <div class="ai">Du kommunicerar med en tjänst där innehållet tas fram av AI. Svar på frågor kan också vara AI-genererade och är alltid märkta som det.</div>
+</main>
+<footer>
+  <div data-seller></div>
+  <div><a href="../integritet.html">Integritetspolicy</a> · Inga cookies används på denna sida.</div>
+</footer>
+<script src="../config.js"></script>
+<script src="../site.js"></script>
+</body>
+</html>

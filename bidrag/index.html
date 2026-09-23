@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bidragsbevakaren – utlysningar som passar ditt företag</title>
+<meta name="description" content="Vi bevakar Vinnova, Tillväxtverket, Energimyndigheten, regionerna och EU och mejlar bara de utlysningar ditt företag faktiskt kan söka. 390 kr/mån.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <div class="eyebrow">Bidragsbevakaren · för småföretag och deras rådgivare</div>
+  <h1>Missa aldrig ett bidrag ditt företag kan söka.</h1>
+  <p class="lead">Vi bevakar utlysningar från myndigheter, regioner och EU. Du får bara de som passar ditt företag,
+    med krav, belopp, sista ansökningsdag och en bedömning av hur väl ni matchar.</p>
+  <div class="cta">
+    <a class="btn primary" data-stripe="bidrag" href="#">Förhandsboka: första månaden 190 kr</a>
+    <a class="btn ghost" href="#vantelista">Ställ dig på väntelistan</a>
+  </div>
+  <p class="note">Endast för företag. Priser exkl. eventuell moms. Därefter 390 kr/mån, ingen bindningstid. Ingen betalning nu.</p>
+</header>
+
+<main>
+  <h2>Det här får du</h2>
+  <ul class="check">
+    <li><strong>Matchade utlysningar</strong> utifrån bransch, storlek, region och vad ni vill göra, till exempel export, digitalisering, energi eller innovation.</li>
+    <li><strong>Sammanfattning per utlysning:</strong> vem som kan söka, belopp, krav på medfinansiering, sista dag.</li>
+    <li><strong>Matchningsbedömning:</strong> hög, medel eller låg, med motivering.</li>
+    <li><strong>Påminnelse</strong> 14 och 3 dagar före sista ansökningsdag.</li>
+    <li>För rådgivare och redovisningsbyråer: bevakning för flera klientprofiler (kontakta oss).</li>
+  </ul>
+
+  <h2>Exempel på leverans</h2>
+  <div class="sample">
+    <span class="tag">Exempel · fiktiv utlysning</span>
+    <strong>Match: Hög · "Digitaliseringscheck för små företag" (fiktiv)</strong>
+    <table>
+      <tr><th>Vem kan söka</th><td>Företag med 1–49 anställda i regionen</td></tr>
+      <tr><th>Belopp</th><td>Upp till 100 000 kr, 50 % medfinansiering</td></tr>
+      <tr><th>Sista dag</th><td>30 november</td></tr>
+      <tr><th>Varför match</th><td>Ni har 8 anställda och planerar ett nytt affärssystem. Konsultkostnader för det är stödberättigande.</td></tr>
+    </table>
+  </div>
+
+  <h2>Pris</h2>
+  <div class="prices">
+    <div class="price">
+      <div>Bidragsbevakaren</div>
+      <div class="amount">390 kr</div>
+      <div class="per">per månad och företagsprofil · första månaden 190 kr</div>
+    </div>
+  </div>
+
+  <h2 id="vantelista">Väntelista</h2>
+  <form data-waitlist>
+    <input type="hidden" name="nisch" value="bidrag">
+    <input type="hidden" name="kalla" value="">
+    <label>E-post (jobb)<input type="email" name="email" required autocomplete="email"></label>
+    <label>Företag<input type="text" name="foretag" required></label>
+    <label>Antal anställda
+      <select name="anstallda" required>
+        <option value="">Välj …</option><option>0–1</option><option>2–9</option><option>10–49</option><option>50–249</option><option>Jag är rådgivare/byrå</option>
+      </select>
+    </label>
+    <label>Vad vill ni ha stöd till?<input type="text" name="behov" required placeholder="t.ex. export, energi, digitalisering, anställning"></label>
+    <label>Har ni sökt bidrag tidigare? (valfritt)<textarea name="tidigare" rows="2"></textarea></label>
+    <label class="inline"><input type="checkbox" name="samtycke" required>
+      <span>Jag vill få information om lansering och godkänner att uppgifterna behandlas enligt <a href="../integritet.html">integritetspolicyn</a>.</span></label>
+    <button type="submit">Ställ mig på väntelistan</button>
+    <div class="form-msg" role="status"></div>
+  </form>
+
+  <h2>Vanliga frågor</h2>
+  <details><summary>Varifrån kommer utlysningarna?</summary>
+    <p>Från myndigheters, regioners och EU:s offentliga webbplatser och öppna data. Vi länkar alltid till originalet.
+    Det är den texten som gäller.</p></details>
+  <details><summary>Vem gör bedömningen?</summary>
+    <p>Matchning och sammanfattning görs av AI (Claude från Anthropic). Det är ett beslutsstöd, inte en garanti för
+    att ni beviljas stöd. Kontrollera alltid villkoren i originalutlysningen.</p></details>
+  <details><summary>Skriver ni ansökan också?</summary><p>Inte i nuläget. Tjänsten är bevakning och matchning.</p></details>
+  <details><summary>Kan jag säga upp?</summary><p>Ja, när som helst. Tjänsten löper ut vid slutet av den betalda månaden.</p></details>
+
+  <div class="ai">Du kommunicerar med en tjänst där innehållet tas fram av AI. Svar på frågor kan också vara AI-genererade och är alltid märkta som det.</div>
+</main>
+<footer>
+  <div data-seller></div>
+  <div><a href="../integritet.html">Integritetspolicy</a> · Inga cookies används på denna sida.</div>
+</footer>
+<script src="../config.js"></script>
+<script src="../site.js"></script>
+</body>
+</html>

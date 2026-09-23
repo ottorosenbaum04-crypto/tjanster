@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anbudsklar – anbudsanalys för småföretag</title>
+<meta name="description" content="Skicka förfrågningsunderlaget och få tillbaka en kravmatris, alla skall-krav, risker och ett go/no-go-underlag inom 2 arbetsdagar. 1 490 kr per upphandling.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <div class="eyebrow">Anbudsklar · för småföretag som lämnar anbud i offentlig upphandling</div>
+  <h1>Vet på en timme om upphandlingen är värd ett anbud.</h1>
+  <p class="lead">Skicka förfrågningsunderlaget. Inom 2 arbetsdagar får du en kravmatris med alla skall-krav,
+    utvärderingsmodellen i klartext, risker och frågor du bör ställa till beställaren.</p>
+  <div class="cta">
+    <a class="btn primary" data-stripe="upphandling_analys" href="#">Förhandsboka första analysen: 990 kr</a>
+    <a class="btn ghost" href="#vantelista">Ställ dig på väntelistan</a>
+  </div>
+  <p class="note">Endast för företag. Priser exkl. eventuell moms. Ingen betalning nu. Du bekräftar beställningen innan tjänsten startar.</p>
+</header>
+
+<main>
+  <h2>Det här får du</h2>
+  <ul class="check">
+    <li><strong>Kravmatris</strong> med alla skall-krav och bör-krav, med sidhänvisning till underlaget.</li>
+    <li><strong>Kvalificeringskrav</strong> som omsättning, referenser och certifikat, så att du direkt ser om ni uppfyller dem.</li>
+    <li><strong>Utvärderingsmodellen i klartext:</strong> vad som faktiskt avgör vem som vinner.</li>
+    <li><strong>Risker och fallgropar:</strong> viten, ovanliga avtalsvillkor, korta frister, oklara formuleringar.</li>
+    <li><strong>Förslag på frågor</strong> till den upphandlande myndigheten under frågeperioden.</li>
+    <li><strong>Go/no-go-underlag</strong> på en sida. Beslutet fattar du.</li>
+  </ul>
+
+  <h2>Exempel på leverans</h2>
+  <div class="sample">
+    <span class="tag">Exempel · fiktiv upphandling</span>
+    <strong>Ramavtal städtjänster, fiktiv kommun · sista anbudsdag 14 nov</strong>
+    <table>
+      <tr><th>Krav</th><th>Typ</th><th>Sida</th><th>Kommentar</th></tr>
+      <tr><td>Omsättning ≥ 4 Mkr senaste räkenskapsåret</td><td>Skall</td><td>12</td><td>Kontrollera mot er senaste årsredovisning.</td></tr>
+      <tr><td>Två referensuppdrag, minst 1 000 m², senaste 3 åren</td><td>Skall</td><td>13</td><td>Referenserna ska vara offentliga eller privata av motsvarande omfattning.</td></tr>
+      <tr><td>Miljöledningssystem enligt ISO 14001 eller likvärdigt</td><td>Skall</td><td>15</td><td>"Likvärdigt" är oklart definierat. Föreslagen fråga till beställaren nedan.</td></tr>
+      <tr><td>Pris 60 %, kvalitet 40 % (intervjuer med nyckelpersoner)</td><td>Utvärdering</td><td>21</td><td>Kvalitetsdelen avgör vid jämna priser. Förbered nyckelpersonerna.</td></tr>
+      <tr><td>Vite 2 % av månadsvärdet per avvikelse</td><td>Risk</td><td>34</td><td>Högt jämfört med vanliga nivåer. Räkna in det i priset.</td></tr>
+    </table>
+  </div>
+
+  <h2>Priser</h2>
+  <div class="prices">
+    <div class="price">
+      <div>Anbudsanalys</div>
+      <div class="amount">1 490 kr</div>
+      <div class="per">per upphandling · 990 kr för första analysen</div>
+    </div>
+    <div class="price">
+      <div>Bevakning + sammanfattning</div>
+      <div class="amount">490 kr</div>
+      <div class="per">per månad · nya upphandlingar som matchar er profil, med kort bedömning. Ingen bindningstid.</div>
+      <p><a class="btn ghost" data-stripe="upphandling_bevakning" href="#">Förhandsboka bevakning</a></p>
+    </div>
+  </div>
+
+  <h2 id="vantelista">Väntelista</h2>
+  <form data-waitlist>
+    <input type="hidden" name="nisch" value="upphandling">
+    <input type="hidden" name="kalla" value="">
+    <label>E-post (jobb)<input type="email" name="email" required autocomplete="email"></label>
+    <label>Företag<input type="text" name="foretag" required></label>
+    <label>Bransch
+      <select name="bransch" required>
+        <option value="">Välj …</option><option>Bygg och anläggning</option><option>IT och konsult</option>
+        <option>Fastighetsservice och städ</option><option>Transport</option><option>Annat</option>
+      </select>
+    </label>
+    <label>Hur många anbud lämnar ni per år?
+      <select name="anbud_per_ar" required>
+        <option value="">Välj …</option><option>0 – vill börja</option><option>1–5</option><option>6–20</option><option>Fler än 20</option>
+      </select>
+    </label>
+    <label>Vad är svårast med anbud idag? (valfritt)<textarea name="problem" rows="2"></textarea></label>
+    <label class="inline"><input type="checkbox" name="samtycke" required>
+      <span>Jag vill få information om lansering och godkänner att uppgifterna behandlas enligt <a href="../integritet.html">integritetspolicyn</a>.</span></label>
+    <button type="submit">Ställ mig på väntelistan</button>
+    <div class="form-msg" role="status"></div>
+  </form>
+
+  <h2>Vanliga frågor</h2>
+  <details><summary>Vem gör analysen?</summary>
+    <p>Analysen tas fram av en AI (Claude från Anthropic) och kvalitetsgranskas innan leverans. Den är ett beslutsstöd
+    och ersätter inte juridisk rådgivning. Ansvaret för anbudet är alltid ditt.</p></details>
+  <details><summary>Vad händer med underlaget jag skickar?</summary>
+    <p>Det används bara för att ta fram din analys och raderas 90 dagar efter leverans. Det används inte för att
+    träna AI-modeller. Se <a href="../integritet.html">integritetspolicyn</a>.</p></details>
+  <details><summary>Vilka upphandlingar fungerar det för?</summary>
+    <p>Svenska offentliga upphandlingar med förfrågningsunderlag i PDF- eller Word-format, upp till cirka 300 sidor.</p></details>
+  <details><summary>Kan jag säga upp bevakningen?</summary>
+    <p>Ja, när som helst. Den löper ut vid slutet av den betalda månaden.</p></details>
+
+  <div class="ai">Du kommunicerar med en tjänst där innehållet tas fram av AI. Svar på frågor kan också vara AI-genererade och är alltid märkta som det.</div>
+</main>
+<footer>
+  <div data-seller></div>
+  <div><a href="../integritet.html">Integritetspolicy</a> · Inga cookies används på denna sida.</div>
+</footer>
+<script src="../config.js"></script>
+<script src="../site.js"></script>
+</body>
+</html>
