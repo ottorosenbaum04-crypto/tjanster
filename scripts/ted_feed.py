@@ -120,7 +120,7 @@ def page(title, desc, inner, depth=1):
     return f"""<!doctype html>
 <html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)} – Anbudsklar</title><meta name="description" content="{e(desc)}">
-<link rel="stylesheet" href="{up}style.css"></head>
+<link rel="stylesheet" href="{up}style.css?v=3"></head>
 <body>
 <nav class="nav"><div class="wrap">
   <a class="logo" href="{up}"><span class="logo-mark">A</span>Anbudsklar</a>
@@ -149,7 +149,7 @@ Anbudsanalyserna tas fram med AI och granskas av en människa innan leverans.</s
   </div>
   <div class="legal"><span data-seller></span><span>Inga cookies, ingen spårning.</span></div>
 </div></footer>
-<script src="{up}config.js"></script><script src="{up}site.js"></script></body></html>"""
+<script src="{up}config.js?v=3"></script><script src="{up}site.js?v=3"></script></body></html>"""
 
 
 def main():
