@@ -1,0 +1,29 @@
+name: Daglig upphandlingsbevakning
+
+on:
+  schedule:
+    - cron: "15 4 * * *"   # 06:15 svensk sommartid / 05:15 vintertid
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Hämta öppna upphandlingar från TED och bygg sidor
+        run: python scripts/ted_feed.py
+      - name: Publicera om något ändrats
+        run: |
+          git config user.name "bevakning-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bevakning sitemap.xml
+          git diff --cached --quiet && echo "Inga ändringar" && exit 0
+          git commit -m "Daglig bevakning $(date -u +%F)"
+          git push
