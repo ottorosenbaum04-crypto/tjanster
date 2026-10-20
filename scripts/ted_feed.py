@@ -119,11 +119,11 @@ def page(title, desc, inner, depth=1):
     e = html.escape
     return f"""<!doctype html>
 <html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{e(title)} – Anbudsklar</title><meta name="description" content="{e(desc)}">
+<title>{e(title)} – Kravkartan</title><meta name="description" content="{e(desc)}">
 <link rel="stylesheet" href="{up}style.css?v=3"></head>
 <body>
 <nav class="nav"><div class="wrap">
-  <a class="logo" href="{up}"><span class="logo-mark">A</span>Anbudsklar</a>
+  <a class="logo" href="{up}"><span class="logo-mark">K</span>Kravkartan</a>
   <div class="nav-links"><a href="{up}upphandling/">Anbudsanalys</a><a href="{up}bevakning/" aria-current="page">Öppna upphandlingar</a>
     <a href="{up}rekrytering/">Rekrytering</a><a href="{up}bidrag/">Bidrag</a></div>
   <a class="btn btn-primary btn-sm nav-cta" href="{up}upphandling/">Testa gratis</a>
@@ -142,7 +142,7 @@ Anbudsanalyserna tas fram med AI och granskas av en människa innan leverans.</s
 </div></main>
 <footer class="footer"><div class="wrap">
   <div class="cols">
-    <div><a class="logo" href="{up}"><span class="logo-mark">A</span>Anbudsklar</a>
+    <div><a class="logo" href="{up}"><span class="logo-mark">K</span>Kravkartan</a>
       <p style="margin:12px 0 0;max-width:30em">Analyser och bevakning för svenska småföretag, byggt på öppna data.</p></div>
     <div><h4>Tjänster</h4><a href="{up}upphandling/">Anbudsanalys</a><a href="{up}bevakning/">Öppna upphandlingar</a><a href="{up}rekrytering/">Rekryteringsradarn</a><a href="{up}bidrag/">Bidragsbevakaren</a></div>
     <div><h4>Information</h4><a href="{up}integritet.html">Integritetspolicy</a></div>
