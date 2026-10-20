@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ottorosenbaum04-crypto.github.io/tjanster/sitemap.xml

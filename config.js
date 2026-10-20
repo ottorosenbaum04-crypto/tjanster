@@ -8,7 +8,7 @@ window.SITE = {
   seller: {
     name: "Otto Rosenbaum", // t.ex. "Förnamn Efternamn (enskild firma)"
     orgnr: "",         // lämna tomt tills firman är registrerad
-    email: "ottorosenbaum04@gmail.com", // kontaktadress
+    email: "rosenotto58@gmail.com", // kontaktadress
     city: "Uppsala"    // ort
   },
   formEndpoint: "",    // t.ex. https://<formulärtjänst>/f/abc123
