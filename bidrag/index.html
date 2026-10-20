@@ -3,90 +3,131 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bidragsbevakaren – utlysningar som passar ditt företag</title>
-<meta name="description" content="Vi bevakar Vinnovas utlysningar och mejlar bara de som passar ditt företag, med matchning och dagar kvar. 390 kr/mån.">
+<title>Bidragsbevakaren – Vinnova-utlysningar som passar ditt företag</title>
+<meta name="description" content="Vi bevakar Vinnovas utlysningar och mejlar bara de som passar ditt företag, med matchning, belopp och dagar kvar. 390 kr/mån.">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-<header>
-  <div class="eyebrow">Bidragsbevakaren · för småföretag och deras rådgivare</div>
-  <h1>Missa aldrig ett bidrag ditt företag kan söka.</h1>
-  <p class="lead">Vi bevakar Vinnovas öppna utlysningar. Du får bara de som passar ditt företag, med krav, belopp,
-    sista ansökningsdag och en bedömning av hur väl ni matchar. Fler källor läggs till löpande.</p>
-  <div class="cta">
-    <a class="btn primary" data-stripe="bidrag" href="#">Förhandsboka: första månaden 190 kr</a>
-    <a class="btn ghost" href="#vantelista">Ställ dig på väntelistan</a>
+
+<nav class="nav"><div class="wrap">
+  <a class="logo" href="../"><span class="logo-mark">B</span>Bidragsbevakaren</a>
+  <div class="nav-links"><a href="#sa-funkar-det">Så funkar det</a><a href="#exempel">Exempel</a><a href="#priser">Pris</a><a href="#fragor">Frågor</a></div>
+  <a class="btn btn-primary btn-sm nav-cta" data-mail-subject="Gratis bidragsmatchning"
+     data-mail-body="Hej!\n\nVi vill ha en gratis matchning mot öppna utlysningar.\n\nFöretag:\nAktiebolag (ja/nej):\nAntal anställda:\nBolagets ålder (år):\nVad vill ni ha stöd till:" href="#priser">Gratis matchning</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <span class="pill"><span class="dot"></span>För småföretag och deras rådgivare</span>
+    <h1>Missa aldrig ett bidrag <span class="grad">ditt företag kan söka.</span></h1>
+    <p class="lead">Vi bevakar Vinnovas öppna utlysningar och matchar dem mot ert företag: storlek, bolagsålder och vad ni vill göra.
+      Ni får bara de som passar, med belopp, villkor och dagar kvar.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" data-mail-subject="Gratis bidragsmatchning"
+         data-mail-body="Hej!\n\nVi vill ha en gratis matchning mot öppna utlysningar.\n\nFöretag:\nAktiebolag (ja/nej):\nAntal anställda:\nBolagets ålder (år):\nVad vill ni ha stöd till:" href="#priser">Få en gratis matchning →</a>
+      <a class="btn btn-secondary" href="#exempel">Se ett exempel</a>
+    </div>
+    <ul class="trust">
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Källa: Vinnovas öppna data</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Motivering till varje matchning</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Ingen bindningstid</li>
+    </ul>
   </div>
-  <p class="note">Endast för företag. Priser exkl. eventuell moms. Därefter 390 kr/mån, ingen bindningstid. Ingen betalning nu.</p>
-</header>
-
-<main>
-  <h2>Det här får du</h2>
-  <ul class="check">
-    <li><strong>Matchade utlysningar</strong> utifrån storlek, bolagsålder och vad ni vill göra, till exempel digitalisering, AI, energi eller produktutveckling.</li>
-    <li><strong>Per utlysning:</strong> vem som kan söka, belopp och medfinansiering, sista dag och länk.</li>
-    <li><strong>Matchningsbedömning:</strong> hög eller medel, med motivering (t.ex. "kräver konsortium").</li>
-    <li><strong>Dagar kvar</strong> till sista ansökningsdag i varje lista, så att inget går förbi.</li>
-    <li>För rådgivare och redovisningsbyråer: bevakning för flera klientprofiler (kontakta oss).</li>
-  </ul>
-
-  <h2>Exempel på leverans</h2>
-  <div class="sample">
-    <span class="tag">Exempel · verklig utlysning, oktober 2026</span>
-    <strong>Match: Hög · Vinnova "Innovativa Startups 2026"</strong>
-    <table>
-      <tr><th>Vem kan söka</th><td>Svenska aktiebolag högst 10 år gamla, max 10 anställda</td></tr>
-      <tr><th>Belopp</th><td>Upp till 500 000 kr</td></tr>
-      <tr><th>Sista dag</th><td>12 januari 2027 (84 dagar kvar)</td></tr>
-      <tr><th>Varför match</th><td>Ni uppfyller kraven på storlek och ålder, och utlysningen gäller att testa en innovativ idé mot marknaden.</td></tr>
-    </table>
-  </div>
-
-  <h2>Pris</h2>
-  <div class="prices">
-    <div class="price">
-      <div>Bidragsbevakaren</div>
-      <div class="amount">390 kr</div>
-      <div class="per">per månad och företagsprofil · första månaden 190 kr</div>
+  <div class="mock" id="exempel">
+    <div class="mock-bar"><i></i><i></i><i></i><span>Bidragsmatchning · exempelprofil (AB, 6 anställda, 3 år)</span></div>
+    <div class="mock-body">
+      <div class="mock-title"><span class="tag eval">Hög</span> Vinnova: Innovativa Startups 2026</div>
+      <div class="mock-sub">Sista dag 12 januari 2027 · upp till 500 000 kr</div>
+      <div class="scroll-x"><table class="tbl">
+        <tr><th>Vem kan söka</th><td>Svenska aktiebolag högst 10 år gamla, max 10 anställda</td></tr>
+        <tr><th>Varför match</th><td>Ni uppfyller kraven på storlek och ålder, och inriktningen matchar</td></tr>
+      </table></div>
+      <div class="mock-title" style="margin-top:16px"><span class="tag skall">Hög</span> Vinnova: Cybersäkerhet, AI och resiliens</div>
+      <div class="mock-sub">Sista dag 19 januari 2027 · 1–10 Mkr · <span style="color:var(--warn)">kräver konsortium med flera parter</span></div>
+      <p class="fine">Verkliga utlysningar, oktober 2026.</p>
     </div>
   </div>
+</div></header>
 
-  <h2 id="vantelista">Väntelista</h2>
-  <form data-waitlist>
-    <input type="hidden" name="nisch" value="bidrag">
-    <input type="hidden" name="kalla" value="">
-    <label>E-post (jobb)<input type="email" name="email" required autocomplete="email"></label>
-    <label>Företag<input type="text" name="foretag" required></label>
-    <label>Antal anställda
-      <select name="anstallda" required>
-        <option value="">Välj …</option><option>0–1</option><option>2–9</option><option>10–49</option><option>50–249</option><option>Jag är rådgivare/byrå</option>
-      </select>
-    </label>
-    <label>Vad vill ni ha stöd till?<input type="text" name="behov" required placeholder="t.ex. export, energi, digitalisering, anställning"></label>
-    <label>Har ni sökt bidrag tidigare? (valfritt)<textarea name="tidigare" rows="2"></textarea></label>
+<section id="sa-funkar-det"><div class="wrap">
+  <div class="section-head center"><div class="kicker">Så funkar det</div><h2>Från företagsprofil till rätt utlysningar</h2></div>
+  <div class="grid-3 steps">
+    <div class="step"><h3>Berätta om företaget</h3><p class="fine" style="font-size:15px">Bolagsform, antal anställda, bolagets ålder och vad ni vill ha stöd till.</p></div>
+    <div class="step"><h3>Vi matchar</h3><p class="fine" style="font-size:15px">Varje öppen utlysning prövas mot er profil: behörighet, storlekskrav och inriktning.</p></div>
+    <div class="step"><h3>Ni får listan</h3><p class="fine" style="font-size:15px">Hög och medel matchning, med motivering, belopp, dagar kvar och länk till ansökan.</p></div>
+  </div>
+</div></section>
+
+<section class="soft"><div class="wrap">
+  <div class="section-head"><div class="kicker">Det här ingår</div><h2>Mindre letande, fler ansökningar i tid</h2></div>
+  <div class="grid-3">
+    <div class="card"><div class="icon">🎯</div><h3>Matchade utlysningar</h3><p>Utifrån storlek, bolagsålder och inriktning, t.ex. digitalisering, AI, energi eller produktutveckling.</p></div>
+    <div class="card"><div class="icon">📄</div><h3>Per utlysning</h3><p>Vem som kan söka, belopp och medfinansiering, sista dag och länk.</p></div>
+    <div class="card"><div class="icon">⚖️</div><h3>Matchningsbedömning</h3><p>Hög eller medel, med motivering, t.ex. "kräver konsortium".</p></div>
+    <div class="card"><div class="icon">⏳</div><h3>Dagar kvar</h3><p>Antal dagar till sista ansökningsdag i varje lista, så att inget går förbi.</p></div>
+    <div class="card"><div class="icon">👥</div><h3>För byråer</h3><p>Redovisningsbyråer och rådgivare kan bevaka flera klientprofiler. Kontakta oss.</p></div>
+    <div class="card"><div class="icon">🔗</div><h3>Alltid originalet</h3><p>Vi länkar till utlysningen. Det är dess villkor som gäller.</p></div>
+  </div>
+</div></section>
+
+<section id="priser"><div class="wrap">
+  <div class="section-head center"><div class="kicker">Pris</div><h2>Enkelt pris per företagsprofil</h2>
+    <p>Endast för företag. Priser exkl. eventuell moms. Ingen betalning nu.</p></div>
+  <div class="pricing">
+    <div class="plan featured"><span class="ribbon">Börja här</span><h3>Gratis matchning</h3><div class="price-big">0 kr</div>
+      <p class="desc">En matchning mot alla öppna Vinnova-utlysningar idag.</p>
+      <a class="btn btn-primary btn-block" data-mail-subject="Gratis bidragsmatchning"
+         data-mail-body="Hej!\n\nVi vill ha en gratis matchning mot öppna utlysningar.\n\nFöretag:\nAktiebolag (ja/nej):\nAntal anställda:\nBolagets ålder (år):\nVad vill ni ha stöd till:" href="#">Få matchningen</a></div>
+    <div class="plan"><h3>Bidragsbevakaren</h3><div class="price-big">390 kr <small>/ mån</small></div>
+      <p class="desc">Första månaden 190 kr. Ny matchning varje vecka.</p>
+      <ul><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Veckovis lista med motivering</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Säg upp när du vill</li></ul>
+      <a class="btn btn-secondary btn-block" data-stripe="bidrag" href="#">Förhandsboka</a></div>
+    <div class="plan"><h3>Byrå</h3><div class="price-big">Offert</div>
+      <p class="desc">Flera klientprofiler för redovisningsbyråer och rådgivare.</p>
+      <a class="btn btn-secondary btn-block" data-mail-subject="Bidragsbevakning för byrå"
+         data-mail-body="Hej!\n\nVi är en byrå och vill veta mer om bevakning för flera klienter.\n\nByrå:\nAntal klienter:\nKontaktperson:" href="#">Kontakta oss</a></div>
+  </div>
+</div></section>
+
+<section class="soft" id="fragor"><div class="wrap narrow">
+  <div class="section-head center"><div class="kicker">Vanliga frågor</div><h2>Frågor och svar</h2></div>
+  <div class="faq">
+    <details><summary>Varifrån kommer utlysningarna?</summary><p>Från Vinnovas öppna data. Fler källor (t.ex. Tillväxtverket och regioner) läggs till när vi kan hämta
+      dem tillförlitligt. Vi länkar alltid till originalet. Det är den texten som gäller.</p></details>
+    <details><summary>Hur görs bedömningen?</summary><p>Automatiskt utifrån fasta regler (storlek, bolagsålder, nyckelord), och den granskas innan utskick.
+      Det är ett beslutsstöd, inte en garanti för att ni beviljas stöd.</p></details>
+    <details><summary>Skriver ni ansökan också?</summary><p>Inte i nuläget. Tjänsten är bevakning och matchning.</p></details>
+    <details><summary>Kan jag säga upp?</summary><p>Ja, när som helst. Tjänsten löper ut vid slutet av den betalda månaden.</p></details>
+  </div>
+</div></section>
+
+<section id="vantelista"><div class="wrap"><div class="grid-2">
+  <div><div class="kicker">Väntelista</div><h2>Inte aktuellt just nu?</h2>
+    <p class="lead">Lämna några uppgifter så hör vi av oss när en utlysning passar er.</p>
+    <div class="ai-note">ℹ️ <span>Matchningen görs automatiskt och granskas av en människa. Svar på frågor kan vara AI-genererade och är då märkta som det.</span></div></div>
+  <div class="form-card"><form data-waitlist>
+    <input type="hidden" name="nisch" value="bidrag"><input type="hidden" name="kalla" value="">
+    <div class="form-row"><label>E-post (jobb)<input type="email" name="email" required autocomplete="email"></label>
+      <label>Företag<input type="text" name="foretag" required></label></div>
+    <div class="form-row"><label>Antal anställda
+        <select name="anstallda" required><option value="">Välj …</option><option>0–1</option><option>2–9</option><option>10–49</option><option>50–249</option><option>Jag är rådgivare/byrå</option></select></label>
+      <label>Vad vill ni ha stöd till?<input type="text" name="behov" required placeholder="t.ex. digitalisering, energi"></label></div>
     <label class="inline"><input type="checkbox" name="samtycke" required>
-      <span>Jag vill få information om lansering och godkänner att uppgifterna behandlas enligt <a href="../integritet.html">integritetspolicyn</a>.</span></label>
-    <button type="submit">Ställ mig på väntelistan</button>
-    <div class="form-msg" role="status"></div>
-  </form>
+      <span>Jag vill få information och godkänner att uppgifterna behandlas enligt <a href="../integritet.html">integritetspolicyn</a>.</span></label>
+    <button type="submit">Ställ mig på listan</button><div class="form-msg" role="status"></div>
+  </form></div>
+</div></div></section>
 
-  <h2>Vanliga frågor</h2>
-  <details><summary>Varifrån kommer utlysningarna?</summary>
-    <p>Från Vinnovas öppna data. Fler källor (t.ex. Tillväxtverket och regioner) läggs till när vi kan hämta dem
-    tillförlitligt. Vi länkar alltid till originalet. Det är den texten som gäller.</p></details>
-  <details><summary>Vem gör bedömningen?</summary>
-    <p>Matchningen görs automatiskt utifrån fasta regler (storlek, bolagsålder, nyckelord) och granskas innan utskick.
-    Det är ett beslutsstöd, inte en garanti för att ni beviljas stöd. Kontrollera alltid villkoren i originalutlysningen.</p></details>
-  <details><summary>Skriver ni ansökan också?</summary><p>Inte i nuläget. Tjänsten är bevakning och matchning.</p></details>
-  <details><summary>Kan jag säga upp?</summary><p>Ja, när som helst. Tjänsten löper ut vid slutet av den betalda månaden.</p></details>
-
-  <div class="ai">Du kommunicerar med en tjänst där innehållet tas fram av AI. Svar på frågor kan också vara AI-genererade och är alltid märkta som det.</div>
-</main>
-<footer>
-  <div data-seller></div>
-  <div><a href="../integritet.html">Integritetspolicy</a> · Inga cookies används på denna sida.</div>
-</footer>
-<script src="../config.js"></script>
-<script src="../site.js"></script>
+<footer class="footer"><div class="wrap">
+  <div class="cols">
+    <div><a class="logo" href="../"><span class="logo-mark">B</span>Bidragsbevakaren</a>
+      <p style="margin:12px 0 0;max-width:30em">Bevakning och matchning av Vinnovas utlysningar för småföretag och byråer.</p></div>
+    <div><h4>Tjänster</h4><a href="../upphandling/">Anbudsanalys</a><a href="../bevakning/">Öppna upphandlingar</a><a href="../rekrytering/">Rekryteringsradarn</a><a href="../bidrag/">Bidragsbevakaren</a></div>
+    <div><h4>Information</h4><a href="../integritet.html">Integritetspolicy</a><a href="#fragor">Vanliga frågor</a><a href="#vantelista">Kontakt</a></div>
+  </div>
+  <div class="legal"><span data-seller></span><span>Inga cookies, ingen spårning.</span></div>
+</div></footer>
+<script src="../config.js"></script><script src="../site.js"></script>
 </body>
 </html>

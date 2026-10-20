@@ -108,27 +108,47 @@ def item_html(x, email):
             "Företag:\nKontaktperson:\n\n(källa: bevakning)")
     mail = f"mailto:{email}?subject={urllib.request.quote(subj)}&body={urllib.request.quote(body)}"
     meta = " · ".join(filter(None, [e(x["kopare"]), e(x["lan"]), kr(x["varde"])]))
-    frist = f'<strong>Sista anbudsdag {x["frist"]}</strong>' if x["frist"] else "Sista anbudsdag: se annonsen"
-    return (f'<li class="up"><a class="t" href="{ted}" rel="noopener">{e(x["titel"])}</a>'
-            f'<div class="m">{meta}</div><div class="m">{frist} · publicerad {x["publicerad"]} · {e(x["bransch"])}</div>'
-            f'<a class="btn ghost small" href="{mail}">Få en gratis anbudsanalys</a></li>')
+    frist = f'<span class="deadline">Sista anbudsdag {x["frist"]}</span>' if x["frist"] else "Sista anbudsdag: se annonsen"
+    return (f'<div class="list-item"><div><a class="t" href="{ted}" rel="noopener">{e(x["titel"])}</a>'
+            f'<div class="m">{meta}</div><div class="m">{frist} · publicerad {x["publicerad"]} · {e(x["bransch"])}</div></div>'
+            f'<a class="btn btn-secondary btn-sm" href="{mail}">Gratis anbudsanalys</a></div>')
 
 
 def page(title, desc, inner, depth=1):
     up = "../" * depth
+    e = html.escape
     return f"""<!doctype html>
 <html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{html.escape(title)}</title><meta name="description" content="{html.escape(desc)}">
-<link rel="stylesheet" href="{up}style.css">
-<style>.up{{list-style:none;border-bottom:1px solid var(--line);padding:14px 0}} .up .t{{font-weight:600}}
-.m{{color:var(--muted);font-size:14px}} .small{{padding:6px 10px;font-size:14px;margin-top:6px}}
-ul.list{{padding:0}} .chips a{{display:inline-block;margin:4px 6px 4px 0;font-size:14px}}</style></head>
-<body><header><div class="eyebrow"><a href="{up}upphandling/">Anbudsklar</a> · Upphandlingsbevakning</div>
-<h1>{html.escape(title)}</h1><p class="lead">{html.escape(desc)}</p></header><main>{inner}
-<div class="ai">Listan uppdateras automatiskt varje morgon från EU:s öppna databas TED. Den omfattar annonser över EU:s
-tröskelvärden. Mindre upphandlingar publiceras i andra databaser. Kontrollera alltid annonsen hos beställaren.
-Anbudsanalyserna tas fram med AI och granskas innan leverans.</div></main>
-<footer><div data-seller></div><div><a href="{up}integritet.html">Integritetspolicy</a> · Inga cookies.</div></footer>
+<title>{e(title)} – Anbudsklar</title><meta name="description" content="{e(desc)}">
+<link rel="stylesheet" href="{up}style.css"></head>
+<body>
+<nav class="nav"><div class="wrap">
+  <a class="logo" href="{up}"><span class="logo-mark">A</span>Anbudsklar</a>
+  <div class="nav-links"><a href="{up}upphandling/">Anbudsanalys</a><a href="{up}bevakning/" aria-current="page">Öppna upphandlingar</a>
+    <a href="{up}rekrytering/">Rekrytering</a><a href="{up}bidrag/">Bidrag</a></div>
+  <a class="btn btn-primary btn-sm nav-cta" href="{up}upphandling/">Testa gratis</a>
+</div></nav>
+<header class="hero" style="padding:52px 0 40px"><div class="wrap" style="display:block">
+  <span class="pill"><span class="dot"></span>Uppdateras automatiskt varje morgon</span>
+  <h1 style="font-size:clamp(32px,4.4vw,48px)">{e(title)}</h1><p class="lead" style="margin:0">{e(desc)}</p>
+</div></header>
+<main><div class="wrap" style="padding-top:36px;padding-bottom:64px">{inner}
+<div class="ai-note" style="margin-top:32px">ℹ️ <span>Listan hämtas varje morgon från EU:s öppna databas TED och omfattar annonser
+över EU:s tröskelvärden. Mindre upphandlingar publiceras i andra databaser. Kontrollera alltid annonsen hos beställaren.
+Anbudsanalyserna tas fram med AI och granskas av en människa innan leverans.</span></div>
+<div class="cta-band" style="margin-top:48px"><h2>Hittade du en intressant upphandling?</h2>
+<p>Klicka på "Gratis anbudsanalys" så får du alla krav, utvärderingsmodellen och riskerna inom 2 arbetsdagar.</p>
+<div class="cta-row" style="justify-content:center"><a class="btn btn-primary" href="{up}upphandling/">Så fungerar analysen</a></div></div>
+</div></main>
+<footer class="footer"><div class="wrap">
+  <div class="cols">
+    <div><a class="logo" href="{up}"><span class="logo-mark">A</span>Anbudsklar</a>
+      <p style="margin:12px 0 0;max-width:30em">Analyser och bevakning för svenska småföretag, byggt på öppna data.</p></div>
+    <div><h4>Tjänster</h4><a href="{up}upphandling/">Anbudsanalys</a><a href="{up}bevakning/">Öppna upphandlingar</a><a href="{up}rekrytering/">Rekryteringsradarn</a><a href="{up}bidrag/">Bidragsbevakaren</a></div>
+    <div><h4>Information</h4><a href="{up}integritet.html">Integritetspolicy</a></div>
+  </div>
+  <div class="legal"><span data-seller></span><span>Inga cookies, ingen spårning.</span></div>
+</div></footer>
 <script src="{up}config.js"></script><script src="{up}site.js"></script></body></html>"""
 
 
@@ -146,14 +166,19 @@ def main():
         by_b[(x["bslug"], x["bransch"])].append(x)
     lan_count = Counter(x["lan"] for x in items)
 
-    chips = "".join(f'<a href="{s}.html">{html.escape(n)} ({len(v)})</a>'
-                    for (s, n), v in sorted(by_b.items(), key=lambda kv: -len(kv[1])))
-    lans = " · ".join(f"{html.escape(l)} {c}" for l, c in lan_count.most_common(8))
+    cards = "".join(
+        f'<a class="card" href="{s}.html" style="color:inherit;text-decoration:none">'
+        f'<div class="fact"><b>{len(v)}</b><span>{html.escape(n)}</span></div></a>'
+        for (s, n), v in sorted(by_b.items(), key=lambda kv: -len(kv[1])))
+    lans = "".join(f'<span class="chip">{html.escape(l)} · {c}</span>' for l, c in lan_count.most_common(10))
     newest = sorted(items, key=lambda x: x["publicerad"], reverse=True)[:40]
-    inner = (f'<p><strong>{len(items)} öppna upphandlingar</strong> just nu (uppdaterad {stamp}).</p>'
-             f'<h2>Per bransch</h2><div class="chips">{chips}</div>'
-             f'<h2>Flest i</h2><p class="m">{lans}</p>'
-             f'<h2>Senast publicerade</h2><ul class="list">{"".join(item_html(x, email) for x in newest)}</ul>')
+    inner = (f'<div class="facts" style="margin-bottom:28px"><div class="fact"><b>{len(items)}</b><span>öppna upphandlingar just nu</span></div>'
+             f'<div class="fact"><b>{len(by_b)}</b><span>branscher</span></div>'
+             f'<div class="fact"><b>{stamp}</b><span>senast uppdaterad</span></div></div>'
+             f'<h2 style="font-size:24px">Per bransch</h2>'
+             f'<div class="grid-3" style="grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-bottom:28px">{cards}</div>'
+             f'<h2 style="font-size:24px">Flest i</h2><div class="chips" style="margin-bottom:28px">{lans}</div>'
+             f'<h2 style="font-size:24px">Senast publicerade</h2>{"".join(item_html(x, email) for x in newest)}')
     (OUT / "index.html").write_text(page("Öppna offentliga upphandlingar i Sverige",
         "Nya upphandlingar varje morgon, sorterade per bransch, med sista anbudsdag. Gratis.", inner), encoding="utf-8")
 
@@ -161,7 +186,7 @@ def main():
         groups = defaultdict(list)
         for x in v:
             groups[x["lan"]].append(x)
-        sec = "".join(f'<h2>{html.escape(l)} ({len(g)})</h2><ul class="list">{"".join(item_html(x, email) for x in g)}</ul>'
+        sec = "".join(f'<h2 style="font-size:22px;margin-top:36px">{html.escape(l)} ({len(g)})</h2>{"".join(item_html(x, email) for x in g)}'
                       for l, g in sorted(groups.items(), key=lambda kv: -len(kv[1])))
         inner = f'<p><a href="index.html">← Alla branscher</a> · {len(v)} öppna upphandlingar · uppdaterad {stamp}</p>{sec}'
         (OUT / f"{slug}.html").write_text(page(f"Öppna upphandlingar: {name}",

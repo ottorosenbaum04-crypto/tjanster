@@ -3,89 +3,133 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rekryteringsradarn – veckovisa leads för bemanning och rekrytering</title>
-<meta name="description" content="Varje måndag: företagen i din region som just nu rekryterar de roller du tillsätter, sorterade efter hur hett behovet är. 690 kr/mån.">
+<title>Rekryteringsradarn – veckovisa leads för bemannings- och rekryteringsföretag</title>
+<meta name="description" content="Varje måndag: arbetsgivarna i din region som rekryterar de roller du tillsätter, utan annonser från bemanningsföretag. Tabell och CSV. 690 kr/mån.">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-<header>
-  <div class="eyebrow">Rekryteringsradarn · för bemannings- och rekryteringsföretag</div>
-  <h1>Varje måndag: företagen som behöver folk just nu.</h1>
-  <p class="lead">Vi läser alla nya platsannonser i Sverige och skickar en lista över de arbetsgivare i din
-    region som rekryterar de roller du tillsätter. Signaler som många tjänster samtidigt, brådskande startdatum
-    och annonser som publiceras igen visar var behovet är störst.</p>
-  <div class="cta">
-    <a class="btn primary" data-stripe="rekrytering" href="#">Förhandsboka: första månaden 490 kr</a>
-    <a class="btn ghost" href="#vantelista">Ställ dig på väntelistan</a>
+
+<nav class="nav"><div class="wrap">
+  <a class="logo" href="../"><span class="logo-mark">R</span>Rekryteringsradarn</a>
+  <div class="nav-links"><a href="#sa-funkar-det">Så funkar det</a><a href="#exempel">Exempel</a><a href="#priser">Pris</a><a href="#fragor">Frågor</a></div>
+  <a class="btn btn-primary btn-sm nav-cta" data-mail-subject="Gratis provlista: Rekryteringsradarn"
+     data-mail-body="Hej!\n\nVi vill ha en gratis provlista.\n\nRoller vi tillsätter:\nRegion/län:\nFöretag:\nKontaktperson:" href="#priser">Få en gratis provlista</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <span class="pill"><span class="dot"></span>För bemannings- och rekryteringsföretag</span>
+    <h1>Varje måndag: företagen som <span class="grad">behöver folk just nu.</span></h1>
+    <p class="lead">Vi går igenom alla nya platsannonser i Sverige och tar fram arbetsgivarna i din region som rekryterar
+      de roller du tillsätter. Annonser från andra bemanningsföretag filtreras bort, så att du ser behov som ännu inte är tagna.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" data-mail-subject="Gratis provlista: Rekryteringsradarn"
+         data-mail-body="Hej!\n\nVi vill ha en gratis provlista.\n\nRoller vi tillsätter:\nRegion/län:\nFöretag:\nKontaktperson:" href="#priser">Få en gratis provlista →</a>
+      <a class="btn btn-secondary" href="#exempel">Se ett exempel</a>
+    </div>
+    <ul class="trust">
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Arbetsförmedlingens öppna data</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Bemanningsannonser bortfiltrerade</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>CSV för ditt CRM</li>
+    </ul>
   </div>
-  <p class="note">Endast för företag. Priser exkl. eventuell moms. Därefter 690 kr/mån, ingen bindningstid. Ingen betalning nu.</p>
-</header>
-
-<main>
-  <h2>Det här får du</h2>
-  <ul class="check">
-    <li><strong>Veckolista</strong> över arbetsgivare med aktiva annonser inom dina roller och regioner.</li>
-    <li><strong>Behovssignaler:</strong> flera tjänster samtidigt, "snarast"-tillträde och, från andra veckan, annonser som publicerats igen.</li>
-    <li><strong>Per företag:</strong> vilka roller, antal tjänster, orter och senaste publiceringsdag.</li>
-    <li><strong>Trend:</strong> antal annonser direkt från arbetsgivare jämfört med förra veckan (från andra veckan).</li>
-    <li>Levereras som e-post och CSV-fil som du kan importera i ditt CRM.</li>
-  </ul>
-
-  <h2>Exempel på leverans</h2>
-  <div class="sample">
-    <span class="tag">Exempel · fiktiva företag</span>
-    <strong>Vecka 41 · Lager och logistik · Västra Götaland</strong>
-    <table>
-      <tr><th>Arbetsgivare</th><th>Roller</th><th>Signal</th></tr>
-      <tr><td>Exempel Logistik AB</td><td>6 × truckförare, 2 × teamledare</td><td>2 annonser publicerade igen sedan förra veckan</td></tr>
-      <tr><td>Fiktiva Frakt i Borås AB</td><td>4 × lagermedarbetare</td><td>Tillträde "snarast"</td></tr>
-      <tr><td>Demo Distribution AB</td><td>3 × lagermedarbetare</td><td>3 annonser samtidigt</td></tr>
-    </table>
-  </div>
-
-  <h2>Pris</h2>
-  <div class="prices">
-    <div class="price">
-      <div>Rekryteringsradarn</div>
-      <div class="amount">690 kr</div>
-      <div class="per">per månad · valfria roller och regioner · första månaden 490 kr</div>
+  <div class="mock">
+    <div class="mock-bar"><i></i><i></i><i></i><span>Vecka 43 · Undersköterskor · Stockholms län</span></div>
+    <div class="mock-body">
+      <div class="chips"><span class="chip">285 annonser</span><span class="chip warn">141 från bemanningsföretag, bortfiltrerade</span></div>
+      <div class="scroll-x"><table class="tbl">
+        <tr><th>Arbetsgivare</th><th>Tjänster</th><th>Signal</th></tr>
+        <tr><td>Hemtjänstföretag, Haninge m.fl.</td><td class="n">26</td><td><span class="tag eval">Snarast</span></td></tr>
+        <tr><td>Omsorgskoncern, 10 orter</td><td class="n">19</td><td><span class="tag eval">Snarast</span> <span class="tag skall">19 annonser</span></td></tr>
+        <tr><td>Omsorgsföretag, Tyresö m.fl.</td><td class="n">10</td><td><span class="tag eval">Snarast</span></td></tr>
+      </table></div>
+      <p class="fine">Verkliga siffror ur Arbetsförmedlingens öppna data, 20 oktober 2026. Namnen är anonymiserade här. Kunder får företagsnamnen.</p>
     </div>
   </div>
+</div></header>
 
-  <h2 id="vantelista">Väntelista</h2>
-  <form data-waitlist>
-    <input type="hidden" name="nisch" value="rekrytering">
-    <input type="hidden" name="kalla" value="">
-    <label>E-post (jobb)<input type="email" name="email" required autocomplete="email"></label>
-    <label>Företag<input type="text" name="foretag" required></label>
-    <label>Vilka roller tillsätter ni främst?<input type="text" name="roller" required placeholder="t.ex. lager, bygg, vård, IT"></label>
-    <label>Regioner<input type="text" name="regioner" required placeholder="t.ex. Stockholm, Uppsala"></label>
+<section id="sa-funkar-det"><div class="wrap">
+  <div class="section-head center"><div class="kicker">Så funkar det</div><h2>Rätt arbetsgivare, varje vecka</h2>
+    <p>Du väljer roller och regioner. Vi levererar listan varje måndag.</p></div>
+  <div class="grid-3 steps">
+    <div class="step"><h3>Välj roller och regioner</h3><p class="fine" style="font-size:15px">T.ex. undersköterskor i Stockholms län eller lager i Västra Götaland.</p></div>
+    <div class="step"><h3>Vi filtrerar fram behoven</h3><p class="fine" style="font-size:15px">Bemanningsföretagens annonser tas bort. Arbetsgivarna rangordnas efter antal tjänster och hur bråttom de har.</p></div>
+    <div class="step"><h3>Du får listan på måndag</h3><p class="fine" style="font-size:15px">En tabell i mejlet och en CSV-fil att importera i ditt CRM.</p></div>
+  </div>
+</div></section>
+
+<section class="soft" id="exempel"><div class="wrap">
+  <div class="section-head"><div class="kicker">Det här ingår</div><h2>Signaler som visar var behovet är störst</h2></div>
+  <div class="grid-3">
+    <div class="card"><div class="icon">📋</div><h3>Veckolista</h3><p>Arbetsgivare med aktiva annonser inom dina roller och regioner.</p></div>
+    <div class="card"><div class="icon">⚡</div><h3>Behovssignaler</h3><p>Flera tjänster samtidigt, "snarast"-tillträde och, från andra veckan, annonser som publicerats igen.</p></div>
+    <div class="card"><div class="icon">🏢</div><h3>Per företag</h3><p>Roller, antal tjänster, orter och senaste publiceringsdag.</p></div>
+    <div class="card"><div class="icon">📈</div><h3>Trend</h3><p>Antal annonser direkt från arbetsgivare jämfört med förra veckan (från andra veckan).</p></div>
+    <div class="card"><div class="icon">🏛️</div><h3>Offentliga markerade</h3><p>Kommuner och regioner markeras, eftersom de köper bemanning via upphandling.</p></div>
+    <div class="card"><div class="icon">⬇️</div><h3>CSV-export</h3><p>Hela listan som fil, redo att importera i ditt CRM.</p></div>
+  </div>
+</div></section>
+
+<section id="priser"><div class="wrap">
+  <div class="section-head center"><div class="kicker">Pris</div><h2>En lista i veckan. Ingen bindningstid.</h2>
+    <p>Endast för företag. Priser exkl. eventuell moms. Ingen betalning nu.</p></div>
+  <div class="pricing">
+    <div class="plan featured"><span class="ribbon">Börja här</span><h3>Gratis provlista</h3><div class="price-big">0 kr</div>
+      <p class="desc">En lista för en roll och en region, så att du kan bedöma värdet.</p>
+      <ul><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Riktiga arbetsgivare från veckans annonser</li></ul>
+      <a class="btn btn-primary btn-block" data-mail-subject="Gratis provlista: Rekryteringsradarn"
+         data-mail-body="Hej!\n\nVi vill ha en gratis provlista.\n\nRoller vi tillsätter:\nRegion/län:\nFöretag:\nKontaktperson:" href="#">Få provlistan</a></div>
+    <div class="plan"><h3>Rekryteringsradarn</h3><div class="price-big">690 kr <small>/ mån</small></div>
+      <p class="desc">Första månaden 490 kr. Valfria roller och regioner.</p>
+      <ul><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Lista varje måndag</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Signaler, trend och CSV</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Säg upp när du vill</li></ul>
+      <a class="btn btn-secondary btn-block" data-stripe="rekrytering" href="#">Förhandsboka</a></div>
+    <div class="plan"><h3>Väntelista</h3><div class="price-big">–</div>
+      <p class="desc">Inte aktuellt just nu? Lämna dina uppgifter så hör vi av oss.</p>
+      <a class="btn btn-secondary btn-block" href="#vantelista">Till väntelistan</a></div>
+  </div>
+</div></section>
+
+<section class="soft" id="fragor"><div class="wrap narrow">
+  <div class="section-head center"><div class="kicker">Vanliga frågor</div><h2>Frågor och svar</h2></div>
+  <div class="faq">
+    <details><summary>Varifrån kommer datan?</summary><p>Från Arbetsförmedlingens öppna data om platsannonser (JobTech). Vi redovisar arbetsgivare och roller.
+      Kontaktpersoner och andra personuppgifter i annonserna tas inte med.</p></details>
+    <details><summary>Hur sammanställs listan?</summary><p>Automatiskt enligt fasta regler, och sedan granskas den innan utskick. Signalerna är ett beslutsstöd,
+      ingen garanti för att ett företag vill anlita er.</p></details>
+    <details><summary>Får jag kontakta företagen på listan?</summary><p>Du ansvarar själv för att din kontakt följer marknadsföringslagen och GDPR.
+      Kontakta till exempel företagets allmänna kanaler och erbjud alltid möjlighet att tacka nej.</p></details>
+    <details><summary>Kan jag säga upp?</summary><p>Ja, när som helst. Tjänsten löper ut vid slutet av den betalda månaden.</p></details>
+  </div>
+</div></section>
+
+<section id="vantelista"><div class="wrap"><div class="grid-2">
+  <div><div class="kicker">Väntelista</div><h2>Hör av oss när det passar</h2>
+    <p class="lead">Lämna roller och regioner så skickar vi en provlista när du vill.</p>
+    <div class="ai-note">ℹ️ <span>Listorna sammanställs automatiskt och granskas av en människa. Svar på frågor kan vara AI-genererade och är då märkta som det.</span></div></div>
+  <div class="form-card"><form data-waitlist>
+    <input type="hidden" name="nisch" value="rekrytering"><input type="hidden" name="kalla" value="">
+    <div class="form-row"><label>E-post (jobb)<input type="email" name="email" required autocomplete="email"></label>
+      <label>Företag<input type="text" name="foretag" required></label></div>
+    <div class="form-row"><label>Roller ni tillsätter<input type="text" name="roller" required placeholder="t.ex. vård, lager, bygg"></label>
+      <label>Regioner<input type="text" name="regioner" required placeholder="t.ex. Stockholm, Uppsala"></label></div>
     <label>Hur hittar ni nya kunder idag? (valfritt)<textarea name="idag" rows="2"></textarea></label>
     <label class="inline"><input type="checkbox" name="samtycke" required>
-      <span>Jag vill få information om lansering och godkänner att uppgifterna behandlas enligt <a href="../integritet.html">integritetspolicyn</a>.</span></label>
-    <button type="submit">Ställ mig på väntelistan</button>
-    <div class="form-msg" role="status"></div>
-  </form>
+      <span>Jag vill få information och godkänner att uppgifterna behandlas enligt <a href="../integritet.html">integritetspolicyn</a>.</span></label>
+    <button type="submit">Ställ mig på listan</button><div class="form-msg" role="status"></div>
+  </form></div>
+</div></div></section>
 
-  <h2>Vanliga frågor</h2>
-  <details><summary>Varifrån kommer datan?</summary>
-    <p>Från Arbetsförmedlingens öppna data om platsannonser (JobTech). Vi redovisar arbetsgivare och roller.
-    Kontaktpersoner och andra personuppgifter i annonserna tas inte med.</p></details>
-  <details><summary>Vem sammanställer listan?</summary>
-    <p>Listan sorteras och sammanfattas av AI (Claude från Anthropic) enligt fasta regler. Signalerna är ett
-    beslutsstöd och ingen garanti för att ett företag vill anlita er.</p></details>
-  <details><summary>Får jag kontakta företagen på listan?</summary>
-    <p>Du ansvarar själv för att din kontakt följer marknadsföringslagen och GDPR. Kontakta till exempel
-    företagets allmänna kanaler och erbjud alltid möjlighet att tacka nej.</p></details>
-  <details><summary>Kan jag säga upp?</summary><p>Ja, när som helst. Tjänsten löper ut vid slutet av den betalda månaden.</p></details>
-
-  <div class="ai">Du kommunicerar med en tjänst där innehållet tas fram av AI. Svar på frågor kan också vara AI-genererade och är alltid märkta som det.</div>
-</main>
-<footer>
-  <div data-seller></div>
-  <div><a href="../integritet.html">Integritetspolicy</a> · Inga cookies används på denna sida.</div>
-</footer>
-<script src="../config.js"></script>
-<script src="../site.js"></script>
+<footer class="footer"><div class="wrap">
+  <div class="cols">
+    <div><a class="logo" href="../"><span class="logo-mark">R</span>Rekryteringsradarn</a>
+      <p style="margin:12px 0 0;max-width:30em">Veckovisa leads för bemannings- och rekryteringsföretag, från öppna data.</p></div>
+    <div><h4>Tjänster</h4><a href="../upphandling/">Anbudsanalys</a><a href="../bevakning/">Öppna upphandlingar</a><a href="../rekrytering/">Rekryteringsradarn</a><a href="../bidrag/">Bidragsbevakaren</a></div>
+    <div><h4>Information</h4><a href="../integritet.html">Integritetspolicy</a><a href="#fragor">Vanliga frågor</a><a href="#vantelista">Kontakt</a></div>
+  </div>
+  <div class="legal"><span data-seller></span><span>Inga cookies, ingen spårning.</span></div>
+</div></footer>
+<script src="../config.js"></script><script src="../site.js"></script>
 </body>
 </html>

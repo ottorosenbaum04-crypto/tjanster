@@ -3,23 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Integritetspolicy</title>
+<title>Integritetspolicy – Anbudsklar</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
+<nav class="nav"><div class="wrap">
+  <a class="logo" href="./"><span class="logo-mark">A</span>Anbudsklar</a>
+  <div class="nav-links"><a href="upphandling/">Anbudsanalys</a><a href="bevakning/">Öppna upphandlingar</a><a href="rekrytering/">Rekrytering</a><a href="bidrag/">Bidrag</a></div>
+</div></nav>
+
+<main class="doc"><div class="wrap narrow" style="padding-top:56px;padding-bottom:72px">
+  <div class="kicker">Juridiskt</div>
   <h1>Integritetspolicy</h1>
-  <p class="lead">Så behandlar vi dina personuppgifter när du anmäler dig till en väntelista eller använder våra tjänster.</p>
-</header>
-<main>
+  <p class="lead">Så behandlar vi dina personuppgifter när du anmäler dig, förhandsbokar eller använder våra tjänster.</p>
+
   <h2>Personuppgiftsansvarig</h2>
   <p data-seller></p>
 
   <h2>Vilka uppgifter och varför</h2>
   <ul>
-    <li><strong>Väntelista:</strong> e-post, företagsnamn och dina svar i formuläret. Syftet är att informera dig om
-      lanseringen och förstå om tjänsten behövs. Rättslig grund: ditt samtycke. Du kan när som helst återkalla det.</li>
-    <li><strong>Kunder:</strong> kontakt- och betalningsuppgifter samt det underlag du skickar in. Syftet är att leverera tjänsten och
+    <li><strong>Väntelista och förhandsbokning:</strong> e-post, företagsnamn och dina svar. Syftet är att informera dig och förstå
+      om tjänsten behövs. Rättslig grund: ditt samtycke, som du när som helst kan återkalla.</li>
+    <li><strong>Kunder:</strong> kontakt- och betalningsuppgifter samt underlag du skickar in. Syftet är att leverera tjänsten och
       uppfylla bokföringskrav. Rättslig grund: avtal och rättslig förpliktelse.</li>
   </ul>
 
@@ -29,9 +34,9 @@
 
   <h2>Vilka vi delar med</h2>
   <ul>
-    <li>E-postleverantör och, om sådan används, formulärtjänst som lagrar väntelistan inom EU.</li>
+    <li>E-postleverantör och, om sådan används, formulärtjänst som lagrar data inom EU.</li>
     <li>Betaltjänst (t.ex. Stripe), först när betalning införs.</li>
-    <li>Anthropic (AI-leverantör), för att ta fram analyser och sammanfattningar. Underlaget används inte för att träna modeller.</li>
+    <li>Anthropic (AI-leverantör), för att ta fram analyser. Underlaget används inte för att träna modeller.</li>
   </ul>
   <p>Överföring utanför EU/EES sker endast med skyddsåtgärder enligt GDPR, till exempel EU-kommissionens standardavtalsklausuler.</p>
 
@@ -40,10 +45,18 @@
     Mejla oss på adressen ovan. Du kan också klaga hos Integritetsskyddsmyndigheten (IMY).</p>
 
   <h2>Cookies</h2>
-  <p>Våra sidor använder inga cookies och ingen spårning.</p>
-</main>
-<footer><a href="upphandling/">Anbudsklar</a> · <a href="rekrytering/">Rekryteringsradarn</a> · <a href="bidrag/">Bidragsbevakaren</a></footer>
-<script src="config.js"></script>
-<script src="site.js"></script>
+  <p>Våra sidor använder inga cookies, ingen spårning och inga externa typsnitt.</p>
+</div></main>
+
+<footer class="footer"><div class="wrap">
+  <div class="cols">
+    <div><a class="logo" href="./"><span class="logo-mark">A</span>Anbudsklar</a>
+      <p style="margin:12px 0 0;max-width:30em">Analyser och bevakning för svenska småföretag, byggt på öppna data.</p></div>
+    <div><h4>Tjänster</h4><a href="upphandling/">Anbudsanalys</a><a href="bevakning/">Öppna upphandlingar</a><a href="rekrytering/">Rekryteringsradarn</a><a href="bidrag/">Bidragsbevakaren</a></div>
+    <div><h4>Information</h4><a href="integritet.html">Integritetspolicy</a></div>
+  </div>
+  <div class="legal"><span data-seller></span><span>Inga cookies, ingen spårning.</span></div>
+</div></footer>
+<script src="config.js"></script><script src="site.js"></script>
 </body>
 </html>

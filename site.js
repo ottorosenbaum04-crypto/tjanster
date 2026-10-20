@@ -37,6 +37,13 @@
     }
   });
 
+  // Generiska mejlknappar: <a data-mail-subject="..." data-mail-body="...">  (\n i body blir radbrytning)
+  document.querySelectorAll("[data-mail-subject]").forEach(function (a) {
+    if (!s.email) { a.style.display = "none"; return; }
+    var body = (a.getAttribute("data-mail-body") || "").replace(/\\n/g, "\n");
+    a.href = mailto(a.getAttribute("data-mail-subject"), body + "\n\n(källa: " + src + ")");
+  });
+
   // Säljarinfo i sidfoten
   var parts = [s.name, s.orgnr && "Org.nr " + s.orgnr, s.city, s.email].filter(Boolean);
   document.querySelectorAll("[data-seller]").forEach(function (el) {
